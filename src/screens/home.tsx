@@ -1,4 +1,5 @@
 import { Header } from "@/components/header";
+import { Footer } from "@/sections/footer";
 import { Hero } from "@/sections/hero";
 import { Projects } from "@/sections/projects";
 
@@ -8,6 +9,7 @@ export function Home() {
       <Header />
       <Hero />
       <Projects />
+      <Footer />
     </div>
   );
 }
