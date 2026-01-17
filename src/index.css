@@ -7,6 +7,14 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* My theme */
+  --color-my-background: var(--my-background);
+  --color-my-text-blue: var(--my-text-blue);
+  --color-my-primary-text: var(--my-primary-text);
+  --color-my-secondary-text: var(--my-secondary-text);
+  --color-my-light-gray: var(--my-light-gray);
+
+  /* Shadcn theme */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
