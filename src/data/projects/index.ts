@@ -1,9 +1,6 @@
-import { projectExample } from "./projectExample";
+export type ProjectStack = "fullstack" | "frontend" | "backend";
 
-export type ProjectTypeProps = "fullstack" | "frontend" | "backend";
-
-export type ProjectProps = {
-  id: string;
+export type Project = {
   name: string;
   description: string;
   stack: string[];
@@ -11,11 +8,11 @@ export type ProjectProps = {
     deploy?: string;
     repo?: string;
   };
-  type: ProjectTypeProps;
+  type: ProjectStack;
   isFreelancer: boolean;
   isStar: boolean;
   poster: string;
   imgs: string[];
 };
 
-export const projects: ProjectProps[] = [projectExample];
+export const projects: Project[] = [];
