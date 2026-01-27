@@ -6,7 +6,7 @@ export function HeaderLink({ children }: HeaderLinkProps) {
   return (
     <button
       type="button"
-      className="text-lg font-medium cursor-pointer flex items-center gap-1 hover:text-blue-600 transition-colors"
+      className="text-lg text-my-primary-text font-medium cursor-pointer flex items-center gap-1 hover:text-my-text-blue transition-colors"
     >
       {children}
     </button>

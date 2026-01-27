@@ -9,7 +9,7 @@ export function Header() {
     <header className="flex flex-col fixed w-full top-0 left-0 shadow">
       <div className="flex items-center justify-between py-2 px-4 md:py-3 md:px-5 max-w-5xl w-full mx-auto">
         <div className="flex items-center gap-2">
-          <div className="bg-black text-white p-1 rounded-sm w-fit h-fit flex items-center">{`</>`}</div>
+          <div className="bg-my-primary-text text-my-light-gray p-1 rounded-sm w-fit h-fit flex items-center">{`</>`}</div>
           <strong className="text-base md:text-xl">Lucas Galdino</strong>
         </div>
 
@@ -34,7 +34,7 @@ export function Header() {
       <nav
         className={`
           ${mobileNavIsActive ? "flex" : "hidden"}
-          md:hidden bg-white w-full p-4 flex-col gap-6 items-center
+          md:hidden bg-my-background w-full p-4 flex-col gap-6 items-center
         `}
       >
         <HeaderLink>Projetos</HeaderLink>
