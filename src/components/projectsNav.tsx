@@ -1,14 +1,24 @@
-import { useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import {
   type ProjectButtonOptions,
   projectButtonOptions,
 } from "@/data/projectButtonOptions";
 
-export function ProjectsNav() {
-  const [isActive, setIsActive] = useState<ProjectButtonOptions>("highlights");
+type ProjectsNavProps = React.ComponentProps<"nav"> & {
+  isActive: ProjectButtonOptions;
+  setIsActive: Dispatch<SetStateAction<ProjectButtonOptions>>;
+};
 
+export function ProjectsNav({
+  isActive,
+  setIsActive,
+  ...props
+}: ProjectsNavProps) {
   return (
-    <nav className="flex flex-row gap-1.5 bg-gray-100 w-fit rounded-full p-1.5 mx-auto md:mx-0">
+    <nav
+      {...props}
+      className="flex flex-row gap-1.5 bg-gray-100 w-fit rounded-full p-1.5 mx-auto md:mx-0"
+    >
       {projectButtonOptions.map((item) => (
         <button
           onClick={() => setIsActive(item.optionName)}
