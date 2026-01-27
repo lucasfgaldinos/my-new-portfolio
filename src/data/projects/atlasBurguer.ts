@@ -1,34 +1,31 @@
-import img1 from "@/assets/projects/atlasBurguer/1.jpg";
-import img2 from "@/assets/projects/atlasBurguer/2.jpg";
-import img3 from "@/assets/projects/atlasBurguer/3.jpg";
-import img4 from "@/assets/projects/atlasBurguer/4.jpg";
-import img5 from "@/assets/projects/atlasBurguer/5.jpg";
-import img6 from "@/assets/projects/atlasBurguer/6.jpg";
-import img7 from "@/assets/projects/atlasBurguer/7.jpg";
-import img8 from "@/assets/projects/atlasBurguer/8.jpg";
-import img9 from "@/assets/projects/atlasBurguer/9.jpg";
-import poster from "@/assets/projects/atlasBurguer/poster.png";
+import img1 from "@/assets/projects/atlasBurguer/1.png";
+import img2 from "@/assets/projects/atlasBurguer/2.png";
+import img3 from "@/assets/projects/atlasBurguer/3.png";
+import img4 from "@/assets/projects/atlasBurguer/4.png";
+import img5 from "@/assets/projects/atlasBurguer/5.png";
+import img6 from "@/assets/projects/atlasBurguer/6.png";
+import img7 from "@/assets/projects/atlasBurguer/7.png";
+import img8 from "@/assets/projects/atlasBurguer/8.png";
+import img9 from "@/assets/projects/atlasBurguer/9.png";
 import type { Project } from ".";
 
-export const atlasBurguer: Project = {
+export const atlasburguer: Project = {
   name: "Atlas Burguer",
   description:
-    "Projeto fullstack com interface moderna e responsiva para uma hamburgueria digital, integrando navegação intuitiva, formulários validados e pagamentos online via Stripe. No backend, suporte a APIs eficientes para gerenciamento de pedidos e processamento seguro de transações. A aplicação combina tecnologias robustas para garantir performance, segurança e excelente experiência do usuário.",
+    "Sistema de hamburgueria digital com pedidos online, área administrativa e pagamento integrado.",
   stack: [
-    "React",
-    "TailwindCSS",
     "TypeScript",
-    "Docker",
-    "Node",
+    "React",
+    "Tailwind CSS",
+    "Node.js",
     "Express",
-    "SequelizeORM",
     "PostgreSQL",
-    "Mongoose",
     "MongoDB",
   ],
   type: "fullstack",
   isFreelancer: false,
-  isStar: true,
-  poster: poster,
+  isHighlight: true,
+  banner: img1,
   imgs: [img1, img2, img3, img4, img5, img6, img7, img8, img9],
+  links: { repo: "https://github.com/lucasfgaldinos/atlas-burger-interface" },
 };

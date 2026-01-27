@@ -1,3 +1,16 @@
+import { atlasburguer } from "./atlasBurguer";
+import { calculator } from "./calculator";
+import { easyBills } from "./easyBills";
+import { easyDraw } from "./easyDraw";
+import { gbuddy } from "./gbuddy";
+import { habitus } from "./habitus";
+import { minimalistLpTemplate } from "./minimalistLpTemplate";
+import { petcare } from "./petcare";
+import { registrationForm } from "./registrationForm";
+import { todoApp } from "./todoApp";
+import { userRegistration } from "./userRegistration";
+import { yourLandingPage } from "./yourLandingPage";
+
 export type ProjectStack = "fullstack" | "frontend" | "backend";
 
 export type Project = {
@@ -10,9 +23,22 @@ export type Project = {
   };
   type: ProjectStack;
   isFreelancer: boolean;
-  isStar: boolean;
-  poster: string;
-  imgs: string[];
+  isHighlight: boolean;
+  banner: string;
+  imgs?: string[];
 };
 
-export const projects: Project[] = [];
+export const projects: Project[] = [
+  atlasburguer,
+  easyBills,
+  gbuddy,
+  habitus,
+  userRegistration,
+  petcare,
+  todoApp,
+  registrationForm,
+  minimalistLpTemplate,
+  easyDraw,
+  calculator,
+  yourLandingPage,
+];

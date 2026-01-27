@@ -1,4 +1,9 @@
-import { CubeIcon, LightbulbIcon, UsersFourIcon } from "@phosphor-icons/react";
+import {
+  CubeIcon,
+  LightbulbIcon,
+  ShieldCheckIcon,
+  UsersFourIcon,
+} from "@phosphor-icons/react";
 import type { ReactNode } from "react";
 
 type StrengthsProps = {
@@ -15,22 +20,29 @@ export const strengths: StrengthsProps[] = [
   {
     id: ++id,
     icon: <CubeIcon size={iconSize} />,
-    title: "Visão integrada (Full Stack)",
+    title: "Visão Full Stack",
     subTitle:
-      "Capacidade de atuar em todas as camadas da aplicação, garantindo sinergia entre o frontend, backend e banco de dados.",
+      "Atuação tanto no front-end quanto no back-end, entendendo como as partes da aplicação se conectam.",
   },
   {
     id: ++id,
     icon: <LightbulbIcon size={iconSize} />,
-    title: "Foco em soluções eficientes",
+    title: "Soluções práticas e eficientes",
     subTitle:
-      "Compromisso com código limpo, performance e escalabilidade para criar produtos robustos e duradouros.",
+      "Foco em código limpo e organizado, priorizando soluções simples que resolvem o problema real.",
   },
   {
     id: ++id,
     icon: <UsersFourIcon size={iconSize} />,
-    title: "Colaboração e comunicação",
+    title: "Comunicação e colaboração",
     subTitle:
-      "Facilidade em trabalhar em equipe, comunicar ideias de forma clara e colaborar para alcançar os melhores resultados.",
+      "Facilidade para comunicar ideias com clareza, colaborar em equipe, ouvir feedback e alinhar soluções.",
+  },
+  {
+    id: ++id,
+    icon: <ShieldCheckIcon size={iconSize} />,
+    title: "Disciplina e responsabilidade",
+    subTitle:
+      "Compromisso com organização, qualidade na entrega e constância no processo, mesmo em cenários desafiadores.",
   },
 ];

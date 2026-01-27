@@ -1,21 +1,21 @@
 import type { Stack } from "./skills";
 
-type ButtonOptionsProps = {
+type SkillButtonNavOptions = {
   screenName: string;
   skillName: Stack;
 };
 
-export const buttonOptions: ButtonOptionsProps[] = [
+export const skillButtonNavOptions: SkillButtonNavOptions[] = [
   {
     screenName: "Linguagens",
     skillName: "languages",
   },
   {
-    screenName: "Frontend",
+    screenName: "Front-end",
     skillName: "frontend",
   },
   {
-    screenName: "Backend",
+    screenName: "Back-end",
     skillName: "backend",
   },
   {

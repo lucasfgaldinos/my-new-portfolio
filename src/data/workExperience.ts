@@ -16,22 +16,16 @@ export const workExperience: WorkExperience[] = [
     companyName: "Freelancer",
     startDate: 2024,
     endDate: null,
-    description: "Desenvolvimento de novas funções e aplicações bem dahoras.",
+    description:
+      "Desenvolvimento de aplicações web completas, atuando no frontend e backend, com foco em APIs, modelagem de dados e integração com bancos de dados.",
   },
   {
     id: ++id,
     title: "Eletricista",
-    companyName: "LAS",
+    companyName: "LAS - Latin America Solar",
     startDate: 2021,
-    endDate: 2023,
-    description: "Montagem e instalação de placas fotovoltaicas.",
-  },
-  {
-    id: ++id,
-    title: "Auxiliar de eletricista",
-    companyName: "Zenit",
-    startDate: 2020,
-    endDate: 2020,
-    description: "Aprendendo uma nova profissão.",
+    endDate: 2022,
+    description:
+      "Atuação na área elétrica, desenvolvendo habilidades como resolução de problemas, atenção a detalhes e responsabilidade técnica.",
   },
 ];

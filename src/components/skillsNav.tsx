@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import { buttonOptions } from "@/data/buttonOptions";
+import { skillButtonNavOptions } from "@/data/skillButtonOptions";
 import type { Stack } from "@/data/skills";
 
 type SkillsNavProps = React.ComponentProps<"div"> & {
@@ -17,8 +17,8 @@ export function SkillsNav({
       {...props}
       className="w-full border-b-2 border-gray-200 flex gap-4 md:gap-6"
     >
-      {buttonOptions.length > 0 &&
-        buttonOptions.map((item) => (
+      {skillButtonNavOptions.length > 0 &&
+        skillButtonNavOptions.map((item) => (
           <button
             key={item.skillName}
             className={`

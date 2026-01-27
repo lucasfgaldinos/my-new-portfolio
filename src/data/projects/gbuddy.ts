@@ -1,15 +1,15 @@
-import img1 from "@/assets/projects/gbuddy/1.jpg";
-import poster from "@/assets/projects/gbuddyPoster.jpg";
+import img from "@/assets/projects/gbuddy/1.jpg";
 import type { Project } from ".";
 
-export const projectExample: Project = {
+export const gbuddy: Project = {
   name: "G.Buddy - WebApp",
   description:
-    "Desenvolvimento de componentes e modais interativos para um aplicativo web de academia, utilizando HTML, CSS e JavaScript. Projeto entregue dentro do prazo, com código organizado e cliente satisfeito com o resultado.",
+    "Desenvolvimento de componentes e modais interativos para aplicativo web de academia.",
   stack: ["HTML", "CSS", "JavaScript"],
   type: "frontend",
   isFreelancer: true,
-  isStar: true,
-  poster: poster,
-  imgs: [img1],
+  isHighlight: true,
+  banner: img,
+  imgs: [img],
+  links: { deploy: "https://www.gbuddyapp.com" },
 };

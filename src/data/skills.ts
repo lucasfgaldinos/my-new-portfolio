@@ -5,6 +5,7 @@ import expressImg from "@/assets/skills/express.png";
 import fastifyImg from "@/assets/skills/fastify.png";
 import gitImg from "@/assets/skills/git.png";
 import githubImg from "@/assets/skills/github.png";
+import htmlImg from "@/assets/skills/html.png";
 import jsImg from "@/assets/skills/js.png";
 import knexImg from "@/assets/skills/knex.png";
 import mongoImg from "@/assets/skills/mongo.png";
@@ -39,7 +40,7 @@ export const skills: Skill[] = [
   },
   {
     name: "HTML",
-    img: jsImg,
+    img: htmlImg,
     stack: "frontend",
   },
   {
@@ -53,12 +54,12 @@ export const skills: Skill[] = [
     stack: "frontend",
   },
   {
-    name: "TailwindCSS",
+    name: "Tailwind CSS",
     img: tailwindImg,
     stack: "frontend",
   },
   {
-    name: "Styled-Components",
+    name: "styled-components",
     img: styledComponentsImg,
     stack: "frontend",
   },
@@ -68,7 +69,7 @@ export const skills: Skill[] = [
     stack: "frontend",
   },
   {
-    name: "Node",
+    name: "Node.js",
     img: nodeImg,
     stack: "backend",
   },
@@ -93,7 +94,7 @@ export const skills: Skill[] = [
     stack: "backend",
   },
   {
-    name: "SequelizeORM",
+    name: "Sequelize",
     img: sequelizeImg,
     stack: "backend",
   },
@@ -103,7 +104,7 @@ export const skills: Skill[] = [
     stack: "backend",
   },
   {
-    name: "PrismaORM",
+    name: "Prisma",
     img: prismaImg,
     stack: "backend",
   },

@@ -16,14 +16,15 @@ export function About() {
           <SubTitle subTitle="Minha jornada" />
 
           <p className="text-gray-500 font-medium mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            similique excepturi omnis laboriosam quo, temporibus necessitatibus
-            iure quia laborum dignissimos minus et inventore quaerat nostrum
-            numquam? Soluta ad assumenda nulla, inventore voluptas nesciunt
-            consequuntur minus quis vitae cupiditate corporis, ducimus sunt
-            voluptatibus. Officia, asperiores porro? Deleniti aliquid incidunt,
-            cupiditate illo eligendi omnis officia quis corporis iure vero
-            mollitia.
+            Minha trajetória profissional começou na área elétrica, onde
+            trabalhei com manutenção e instalações por alguns anos. Nesse
+            período, aprendi a lidar com problemas reais, imprevistos,
+            organização e trabalho em equipe. Com o tempo, a programação entrou
+            na minha vida como uma possibilidade de mudança de área e de fazer
+            algo que sempre me interessou. Nesse processo, acabei me apaixonando
+            por programar. Desde então, venho estudando desenvolvimento web de
+            forma consistente e colocando isso em prática em projetos pessoais e
+            trabalhos como freelancer.
           </p>
         </div>
 
@@ -31,13 +32,11 @@ export function About() {
           <SubTitle subTitle="Paixão por desafios" />
 
           <p className="text-gray-500 font-medium mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-            possimus natus incidunt. Veniam exercitationem illum dicta eos est
-            sed id explicabo! Quam veniam perferendis perspiciatis animi
-            explicabo libero minima ad reiciendis, minus deleniti corrupti
-            cupiditate! Voluptatem deleniti accusamus, voluptatibus assumenda
-            amet repellat eius quaerat aperiam. Ullam, rerum. Consequatur,
-            maiores voluptates?
+            Gosto de aprender fazendo. Resolver problemas, testar soluções e
+            melhorar o que já existe é o que mais me motiva na programação.
+            Busco evoluir a cada projeto, trocar experiências, receber feedbacks
+            e contribuir de forma prática para o que está sendo construído,
+            sempre com vontade de aprender mais.
           </p>
         </div>
 

@@ -1,18 +1,22 @@
-import type { ProjectProps } from "@/data/projects";
+import type { Project } from "@/data/projects";
 import { Button } from "./ui/button";
 
-type ProjectCardProp = {
-  project: ProjectProps;
+type ProjectCardProps = {
+  project: Project;
 };
 
-export function ProjectCard({ project: props }: ProjectCardProp) {
+export function ProjectCard({ project: props }: ProjectCardProps) {
   return (
     <div className="w-full border border-gray-300 rounded-xl overflow-hidden mt-3">
-      <div className="bg-violet-600 w-full h-36">
-        {/* <img src="" alt="" /> */}
+      <div className="w-full aspect-video overflow-hidden cursor-grab active:cursor-grabbing">
+        <img
+          className="w-full h-full object-cover"
+          src={props.banner}
+          alt={`Banner ${props.name}`}
+        />
       </div>
 
-      <div className="w-full p-4">
+      <div className="w-full p-4 cursor-grab active:cursor-grabbing">
         <div className="flex flex-col gap-3">
           <b className="text-2xl">{props.name}</b>
           <p>{props.description}</p>

@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/projectCard";
 import { ProjectsNav } from "@/components/projectsNav";
 import { SectionContainer } from "@/components/sectionContainer";
 import { SectionTitle } from "@/components/sectionTitle";
-import { projectExample } from "@/data/projects/projectExample";
+import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
@@ -31,30 +31,12 @@ export function Projects() {
           }}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard project={projectExample} />
-          </SwiperSlide>
+          {projects.length > 0 &&
+            projects.map((item) => (
+              <SwiperSlide key={item.name}>
+                <ProjectCard project={item} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </SectionContainer>

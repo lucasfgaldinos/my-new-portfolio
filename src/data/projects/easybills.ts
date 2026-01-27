@@ -1,28 +1,27 @@
-import poster from "@/assets/projects/easybills/poster.png";
-import img1 from "@/assets/projects/gbuddy/1.jpg";
-import img2 from "@/assets/projects/gbuddy/2.jpg";
-import img3 from "@/assets/projects/gbuddy/3.jpg";
-import img4 from "@/assets/projects/gbuddy/4.jpg";
-import img5 from "@/assets/projects/gbuddy/5.jpg";
+import img1 from "@/assets/projects/easybills/1.png";
+import img2 from "@/assets/projects/easybills/2.png";
+import img3 from "@/assets/projects/easybills/3.png";
+import img4 from "@/assets/projects/easybills/4.png";
+import img5 from "@/assets/projects/easybills/5.png";
 import type { Project } from ".";
 
-export const easybills: Project = {
+export const easyBills: Project = {
   name: "EasyBills",
   description:
-    "MVP Full Stack de um Dashboard financeiro moderno e responsivo, focado na visualização clara de dados e na experiência do usuário. Permite autenticação, gerenciamento de transações (receitas e despesas), categorização, resumo financeiro com gráficos e filtros por data.",
+    "Dashboard financeiro para controle de receitas e despesas, com autenticação e filtros por período.",
   stack: [
-    "React",
-    "TailwindCSS",
     "TypeScript",
-    "Node",
+    "React",
+    "Tailwind CSS",
+    "Node.js",
     "Fastify",
-    "PrismaORM",
     "MongoDB",
     "Firebase",
   ],
   type: "fullstack",
   isFreelancer: false,
-  isStar: true,
-  poster: poster,
+  isHighlight: true,
+  banner: img3,
   imgs: [img1, img2, img3, img4, img5],
+  links: { repo: "https://github.com/lucasfgaldinos/easybills-interface" },
 };
