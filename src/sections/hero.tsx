@@ -1,11 +1,28 @@
 import {
-  FileDocIcon,
   GithubLogoIcon,
+  type IconProps,
   LinkedinLogoIcon,
 } from "@phosphor-icons/react";
+import type { ComponentType } from "react";
 import profilePicture from "@/assets/profilePicture.jpg";
 import { SectionContainer } from "@/components/sectionContainer";
 import { Button } from "@/components/ui/button";
+
+type Links = {
+  url: string;
+  icon: ComponentType<IconProps>;
+};
+
+const links: Links[] = [
+  {
+    url: "https://www.linkedin.com/in/lucas-fernando-galdino-da-silva",
+    icon: LinkedinLogoIcon,
+  },
+  {
+    url: "https://github.com/lucasfgaldinos",
+    icon: GithubLogoIcon,
+  },
+];
 
 export function Hero() {
   return (
@@ -15,29 +32,39 @@ export function Hero() {
           <p className="text-my-text-blue font-medium">
             Olá, seja bem-vindo(a) ao meu portfólio! Eu sou
           </p>
-          <h1 className="text-my-text-blue font-extrabold text-3xl">
+          <h1 className="text-my-text-blue font-extrabold text-4xl md:text-5xl lg:text-7xl max-w-2xs">
             Lucas Galdino
           </h1>
-          <h2 className="font-bold text-3xl leading-5 text-my-primary-text">
+          <h2 className="font-bold text-xl md:text-3xl text-my-primary-text">
             Desenvolvedor Full Stack
           </h2>
-          <p className="font-medium text-my-secondary-text my-7">
-            Com mais de 2 anos de experiência, sou apaixonado por criar soluções
-            web inovadoras e eficientes. Minha expertise abrange tanto o
-            desenvolvimento frontend quando o backend, permitindo-me construir
-            aplicações completas e de alta qualidade.
+          <p className="font-medium text-my-secondary-text mb-7 mt-4">
+            Tenho mais de dois anos de experiência com desenvolvimento web,
+            sempre estudando continuamente e aplicando esse conhecimento em
+            projetos reais. Aqui você encontrará alguns dos meus principais
+            projetos e um pouco sobre mim.
           </p>
 
-          <div className="flex flex-col gap-3 md:flex-row">
-            <Button>
-              Meu LinkedIn <LinkedinLogoIcon />
-            </Button>
-            <Button>
-              Meu GitHub <GithubLogoIcon />
-            </Button>
-            <Button>
-              Meu CV <FileDocIcon />
-            </Button>
+          <div className="flex flex-col gap-3">
+            <div className="w-full flex gap-4 flex-wrap justify-center md:justify-start">
+              <Button>Projetos</Button>
+              <Button>Sobre mim</Button>
+              <Button>Ver currículo</Button>
+            </div>
+
+            <div className="flex gap-4 py-6 w-fit mx-auto md:mx-0">
+              {links.map(({ url, icon: Icon }) => (
+                <a
+                  key={url}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:transform transition-transform hover:scale-120 text-my-text-blue"
+                >
+                  <Icon size={36} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
