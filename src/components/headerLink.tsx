@@ -1,14 +1,12 @@
-import type { HTMLAttributes } from "react";
+type HeaderLinkProps = React.ComponentProps<"div">;
 
-type HeaderLinkProps = HTMLAttributes<HTMLAnchorElement>;
-
-export function HeaderLink({ children }: HeaderLinkProps) {
+export function HeaderLink({ children, ...props }: HeaderLinkProps) {
   return (
-    <button
-      type="button"
-      className="text-lg text-my-primary-text font-medium cursor-pointer flex items-center gap-1 hover:text-my-text-blue transition-colors"
+    <div
+      {...props}
+      className="select-none px-3 py-1 rounded-bl-2xl rounded-br-sm rounded-tl-sm rounded-tr-2xl transition-colors backface-hidden group text-my-primary-text font-medium cursor-pointer flex items-center gap-1 hover:bg-my-text-blue"
     >
       {children}
-    </button>
+    </div>
   );
 }
