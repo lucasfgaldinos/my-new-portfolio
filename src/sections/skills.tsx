@@ -13,7 +13,7 @@ export function Skills() {
     <SectionContainer>
       <SectionTitle title="Habilidades" />
 
-      <div>
+      <div className="h-90 sm:h-72">
         <SkillsNav setSkillActive={setSkillActive} skillActive={skillActive} />
 
         <div className="flex gap-4 mt-8 flex-wrap">
