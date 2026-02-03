@@ -9,7 +9,11 @@ export function ThemeToggleButton() {
   }
 
   return (
-    <button onClick={toggle} type="button" className="cursor-pointer p-1.5">
+    <button
+      onClick={toggle}
+      type="button"
+      className="cursor-pointer p-1.5 transform hover:rotate-45 transition-transform active:opacity-70"
+    >
       {theme === "light" ? (
         <MoonIcon size={24} className="text-indigo-800" />
       ) : (
