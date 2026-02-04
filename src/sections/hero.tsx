@@ -1,12 +1,14 @@
 import {
+  ArrowSquareOutIcon,
   GithubLogoIcon,
   type IconProps,
   LinkedinLogoIcon,
+  ReadCvLogoIcon,
 } from "@phosphor-icons/react";
 import type { ComponentType } from "react";
 import profilePicture from "@/assets/profilePicture.jpg";
 import { SectionContainer } from "@/components/sectionContainer";
-import { Button } from "@/components/ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 type Links = {
   url: string;
@@ -47,9 +49,18 @@ export function Hero() {
 
           <div className="flex flex-col gap-3">
             <div className="w-full flex gap-4 flex-wrap justify-center md:justify-start">
-              <Button>Projetos</Button>
-              <Button>Sobre mim</Button>
-              <Button>Ver currículo</Button>
+              <a
+                href="/DesenvolvedorFullStack-LucasGaldino.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform hover:scale-110 transition"
+              >
+                <RainbowButton variant="outline" size={"lg"}>
+                  <ReadCvLogoIcon />
+                  Ver currículo
+                  <ArrowSquareOutIcon />
+                </RainbowButton>
+              </a>
             </div>
 
             <div className="flex gap-4 py-6 w-fit mx-auto md:mx-0">
