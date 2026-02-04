@@ -1,4 +1,4 @@
-import { CodeIcon, ListIcon } from "@phosphor-icons/react";
+import { CodeIcon, ListIcon, XIcon } from "@phosphor-icons/react";
 import { useState } from "react";
 import { ContactDropdown } from "./contactDropdown";
 import { HeaderLink } from "./headerLink";
@@ -8,8 +8,8 @@ export function Header() {
   const [mobileNavIsActive, setMobileNavIsActive] = useState(false);
 
   return (
-    <header className="flex flex-col fixed w-full top-0 left-0 shadow z-50 bg-my-background/50 backdrop-blur-md">
-      <div className="flex items-center justify-between py-2 px-4 md:py-3 md:px-5 max-w-5xl w-full mx-auto">
+    <header className="flex flex-col fixed w-full px-4 top-4 left-0 z-50">
+      <div className="flex items-center justify-between py-2 px-4 md:py-3 md:px-5 max-w-5xl w-full mx-auto border border-my-light-gray rounded-2xl bg-my-background/50 backdrop-blur-md">
         <div className="flex items-center gap-2">
           <div className="text-my-background p-1.5 bg-my-primary-text rounded-lg">
             <CodeIcon weight="bold" />
@@ -31,9 +31,13 @@ export function Header() {
         <button
           onClick={() => setMobileNavIsActive((value) => !value)}
           type="button"
-          className="cursor-pointer p-1.5 shadow rounded-xl md:hidden"
+          className="cursor-pointer p-1 md:hidden"
         >
-          <ListIcon size={30} weight="light" />
+          {!mobileNavIsActive ? (
+            <ListIcon size={30} weight="light" />
+          ) : (
+            <XIcon size={30} weight="light" />
+          )}
         </button>
       </div>
 
@@ -41,7 +45,7 @@ export function Header() {
       <nav
         className={`
           ${mobileNavIsActive ? "flex" : "hidden"}
-          md:hidden w-full p-4 flex-col gap-6 items-center
+          mt-2 md:hidden w-full p-4 flex-col gap-6 items-center transition-transform bg-my-background/50 backdrop-blur-md rounded-2xl border border-my-light-gray
         `}
       >
         <HeaderLink>Projetos</HeaderLink>
