@@ -7,7 +7,6 @@ import {
 } from "@phosphor-icons/react";
 import clsx from "clsx";
 import { type ComponentType, useEffect, useRef, useState } from "react";
-import curriculum from "../../public/DesenvolvedorFullStack-LucasGaldino.pdf";
 import { HeaderLink } from "./headerLink";
 
 type UsefulLink = {
@@ -30,7 +29,7 @@ const usefulLinks: UsefulLink[] = [
   {
     label: "Ver currículo",
     icon: ReadCvLogoIcon,
-    url: curriculum,
+    url: "/DesenvolvedorFullStack-LucasGaldino.pdf",
   },
 ];
 
@@ -68,7 +67,7 @@ export function ContactDropdown() {
         aria-expanded={open}
         aria-haspopup="menu"
       >
-        Contato
+        Links
         <CaretDownIcon
           size={16}
           className={clsx("ml-1 transition-transform", open && "rotate-180")}
@@ -79,19 +78,19 @@ export function ContactDropdown() {
       {open && (
         <div
           role="menu"
-          className="absolute left-1/2 z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-lg bg-my-light-gray"
+          className="absolute left-1/2 z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-xl bg-my-background border-2 border-my-secondary-text/20"
         >
-          <ul className="py-2">
+          <ul className="p-1.5">
             {usefulLinks.map(({ label, url, icon: Icon }) => (
-              <li key={url} className="group">
+              <li key={url}>
                 <a
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeDropdown}
-                  className="group-hover:text-my-background flex items-center gap-2 px-4 py-2 text-sm text-my-secondary-text transition hover:bg-my-text-blue"
+                  className="rounded-lg flex items-center gap-2 p-2 text-sm text-my-primary-text transition hover:bg-my-primary-text/10"
                 >
-                  <Icon size={22} />
+                  <Icon size={20} />
                   {label}
                 </a>
               </li>
