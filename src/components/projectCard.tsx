@@ -15,7 +15,7 @@ export function ProjectCard({ project: props }: ProjectCardProps) {
   const { openModal } = useImagesModalStore();
 
   return (
-    <div className="w-full h-full border border-my-light-gray rounded-xl overflow-hidden mt-3 flex flex-col">
+    <div className="w-full h-full border border-border rounded-xl overflow-hidden mt-3 flex flex-col">
       <div className="w-full aspect-video overflow-hidden cursor-grab active:cursor-grabbing">
         <img
           className="w-full h-full object-cover"
@@ -26,14 +26,14 @@ export function ProjectCard({ project: props }: ProjectCardProps) {
 
       <div className="w-full p-4 cursor-grab active:cursor-grabbing flex flex-col flex-1">
         <div className="flex flex-col gap-3">
-          <b className="text-lg text-my-primary-text">{props.name}</b>
+          <b className="text-lg">{props.name}</b>
 
-          <p className="text-sm">{props.description}</p>
+          <p className="text-sm text-muted-foreground">{props.description}</p>
 
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-2 flex-wrap mt-1">
             {props.stack.map((item) => (
               <span
-                className="p-0.5 px-2.5 rounded-full bg-my-text-blue text-xs text-my-background"
+                className="p-0.5 px-2.5 rounded-full bg-accent text-xs text-accent-foreground border border-border"
                 key={item}
               >
                 {item}
@@ -68,7 +68,7 @@ export function ProjectCard({ project: props }: ProjectCardProps) {
           )}
 
           {props.links?.repo && (
-            <Button weight="full" variant="primary" asChild>
+            <Button weight="full" variant="secondary" asChild>
               <a
                 href={props.links.repo}
                 target="_blank"

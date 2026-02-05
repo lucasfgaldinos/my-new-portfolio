@@ -15,7 +15,7 @@ export function About() {
         <div>
           <SubTitle subTitle="Minha jornada" />
 
-          <p className="text-my-secondary-text font-medium mt-1">
+          <p className="text-muted-foreground font-medium mt-1">
             Minha trajetória profissional começou na área elétrica, onde
             trabalhei com manutenção e instalações por alguns anos. Nesse
             período, aprendi a lidar com problemas reais, imprevistos,
@@ -31,7 +31,7 @@ export function About() {
         <div>
           <SubTitle subTitle="Paixão por desafios" />
 
-          <p className="text-my-secondary-text font-medium mt-1">
+          <p className="text-muted-foreground font-medium mt-1">
             Gosto de aprender fazendo. Resolver problemas, testar soluções e
             melhorar o que já existe é o que mais me motiva na programação.
             Busco evoluir a cada projeto, trocar experiências, receber feedbacks

@@ -78,7 +78,7 @@ export function ContactDropdown() {
       {open && (
         <div
           role="menu"
-          className="absolute left-1/2 z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-xl bg-my-background border-2 border-my-secondary-text/20"
+          className="absolute left-1/2 z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-xl bg-background border border-border"
         >
           <ul className="p-1.5">
             {usefulLinks.map(({ label, url, icon: Icon }) => (
@@ -88,7 +88,7 @@ export function ContactDropdown() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeDropdown}
-                  className="rounded-lg flex items-center gap-2 p-2 text-sm text-my-primary-text transition hover:bg-my-primary-text/10"
+                  className="rounded-lg flex items-center gap-2 p-2 text-sm transition hover:bg-foreground/5"
                 >
                   <Icon size={20} />
                   {label}

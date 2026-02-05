@@ -9,11 +9,9 @@ export function Header() {
 
   return (
     <header className="flex flex-col fixed w-full px-4 top-4 left-0 z-50">
-      <div className="flex items-center justify-between py-2 px-4 md:py-3 md:px-5 max-w-5xl w-full mx-auto border border-my-light-gray rounded-2xl bg-my-background/50 backdrop-blur-md">
+      <div className="flex items-center justify-between py-2 px-4 md:py-3 md:px-5 max-w-5xl w-full mx-auto border border-border rounded-2xl bg-background/10 backdrop-blur-md">
         <div className="flex items-center gap-2">
-          <div className="text-my-background p-1.5 bg-my-primary-text rounded-lg">
-            <CodeIcon weight="bold" />
-          </div>
+          <CodeIcon weight="bold" size={20} />
           <strong className="text-base md:text-xl">Lucas Galdino</strong>
         </div>
 
@@ -45,7 +43,7 @@ export function Header() {
       <nav
         className={`
           ${mobileNavIsActive ? "flex" : "hidden"}
-          mt-2 md:hidden w-full p-4 flex-col gap-6 items-center transition-transform bg-my-background/50 backdrop-blur-md rounded-2xl border border-my-light-gray
+          mt-2 md:hidden w-full p-4 flex-col gap-6 items-center transition-transform bg-background/10 backdrop-blur-md rounded-2xl border border-border
         `}
       >
         <HeaderLink>Projetos</HeaderLink>

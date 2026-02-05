@@ -17,15 +17,15 @@ export function ProjectsNav({
   return (
     <nav
       {...props}
-      className="flex flex-row gap-1.5 bg-my-light-gray w-fit rounded-full p-1.5 mx-auto md:mx-0"
+      className="flex flex-row gap-1.5 bg-muted w-fit rounded-full p-1.5 mx-auto md:mx-0"
     >
       {projectButtonOptions.map((item) => (
         <button
           onClick={() => setIsActive(item.optionName)}
           key={item.optionName}
           className={`
-              py-1 px-2 md:py-2 md:px-4 flex items-center justify-center rounded-full text-xs md:text-base cursor-pointer font-medium transition
-              ${isActive === item.optionName ? "hover:bg-my-text-blue bg-my-text-blue shadow text-my-background" : "hover:bg-my-secondary-text hover:text-my-background text-my-primary-text"}
+              py-1 px-2 md:py-2 md:px-4 flex items-center justify-center rounded-full text-xs md:text-base cursor-pointer font-medium
+              ${isActive === item.optionName ? "hover:bg-background bg-background shadow" : "hover:bg-muted-foreground/20"}
               `}
           type="button"
         >

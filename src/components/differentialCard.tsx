@@ -14,13 +14,13 @@ export function DifferentialCard({
 }: DifferentialCardProps) {
   return (
     <div {...props} className="flex items-center p-1">
-      <div className="text-my-text-blue h-full flex items-center justify-center pr-3">
+      <div className="text-primary h-full flex items-center justify-center pr-3">
         {icon}
       </div>
 
       <div>
-        <p className="font-bold text-my-primary-text">{title}</p>
-        <p className="text-my-secondary-text font-medium text-sm">{subTitle}</p>
+        <p className="font-bold">{title}</p>
+        <p className="text-muted-foreground font-medium text-sm">{subTitle}</p>
       </div>
     </div>
   );

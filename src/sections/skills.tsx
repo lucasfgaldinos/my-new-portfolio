@@ -6,7 +6,7 @@ import { SkillsNav } from "@/components/skillsNav";
 import { type Stack, skills } from "@/data/skills";
 
 export function Skills() {
-  const [skillActive, setSkillActive] = useState<Stack>("frontend");
+  const [skillActive, setSkillActive] = useState<Stack>("languages");
   const filteredSkills = skills.filter((item) => item.stack === skillActive);
 
   return (
