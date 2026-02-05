@@ -23,18 +23,18 @@ export function Projects() {
   });
 
   return (
-    <SectionContainer className="min-h-182">
+    <SectionContainer>
       <SectionTitle title="Projetos" />
       <ProjectsNav isActive={isActive} setIsActive={setIsActive} />
-      <div className="w-full mt-10">
+      <div className="w-full mt-10 h-130 md:h-120">
         <Swiper
           slidesPerView={1}
           breakpoints={{
-            600: {
+            550: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            800: {
+            1000: {
               slidesPerView: 3,
               spaceBetween: 30,
             },
@@ -44,11 +44,11 @@ export function Projects() {
           pagination={{
             type: "progressbar",
           }}
-          className="mySwiper"
+          className="mySwiper pb-4! select-none"
         >
           {filteredProjects.length > 0 &&
             filteredProjects.map((item) => (
-              <SwiperSlide key={item.name}>
+              <SwiperSlide className="h-auto! flex!" key={item.name}>
                 <ProjectCard project={item} />
               </SwiperSlide>
             ))}
