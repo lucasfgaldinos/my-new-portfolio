@@ -1,3 +1,4 @@
+import { Background } from "@/components/background";
 import { Header } from "@/components/header";
 import { ModalImageViewer } from "@/components/modalImageViewer";
 import { About } from "@/sections/about";
@@ -12,6 +13,8 @@ export function Home() {
 
   return (
     <div>
+      <Background />
+
       <Header />
       <Hero />
       <Projects />
