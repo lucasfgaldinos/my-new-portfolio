@@ -1,5 +1,6 @@
 import { CodeIcon, ListIcon, XIcon } from "@phosphor-icons/react";
 import { useState } from "react";
+import { Link } from "react-scroll";
 import { ContactDropdown } from "./contactDropdown";
 import { HeaderLink } from "./headerLink";
 import { ThemeToggleButton } from "./themeToggleButton";
@@ -17,9 +18,16 @@ export function Header() {
 
         {/* Nav desktop */}
         <nav className="items-center gap-4 hidden md:flex lg:gap-10">
-          <HeaderLink>Projetos</HeaderLink>
-          <HeaderLink>Sobre</HeaderLink>
-          <HeaderLink>Habilidades</HeaderLink>
+          <Link to="projects" smooth duration={400}>
+            <HeaderLink>Projetos</HeaderLink>
+          </Link>
+          <Link to="about" smooth duration={400}>
+            <HeaderLink>Sobre</HeaderLink>
+          </Link>
+          <Link to="skills" smooth duration={400}>
+            <HeaderLink>Habilidades</HeaderLink>
+          </Link>
+
           <ContactDropdown />
 
           <ThemeToggleButton />
@@ -46,9 +54,16 @@ export function Header() {
           mt-2 md:hidden w-full p-4 flex-col gap-6 items-center transition-transform bg-background/10 backdrop-blur-md rounded-2xl border border-border
         `}
       >
-        <HeaderLink>Projetos</HeaderLink>
-        <HeaderLink>Sobre</HeaderLink>
-        <HeaderLink>Habilidades</HeaderLink>
+        <Link to="projects" smooth duration={400}>
+          <HeaderLink>Projetos</HeaderLink>
+        </Link>
+        <Link to="about" smooth duration={400}>
+          <HeaderLink>Sobre</HeaderLink>
+        </Link>
+        <Link to="skills" smooth duration={400}>
+          <HeaderLink>Habilidades</HeaderLink>
+        </Link>
+
         <ContactDropdown />
 
         <ThemeToggleButton />
