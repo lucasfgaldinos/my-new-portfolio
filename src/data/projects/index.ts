@@ -1,12 +1,12 @@
 import { atlasburguer } from "./atlasBurguer";
 import { calculator } from "./calculator";
-import { easyBills } from "./easyBills";
 import { easyDraw } from "./easyDraw";
 import { gbuddy } from "./gbuddy";
 import { habitus } from "./habitus";
 import { minimalistLpTemplate } from "./minimalistLpTemplate";
 import { petcare } from "./petcare";
 import { registrationForm } from "./registrationForm";
+import { easyBills } from "./temp";
 import { todoApp } from "./todoApp";
 import { userRegistration } from "./userRegistration";
 import { yourLandingPage } from "./yourLandingPage";
