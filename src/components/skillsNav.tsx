@@ -22,7 +22,7 @@ export function SkillsNav({
           <button
             key={item.skillName}
             className={`
-          relative top-0.5 pb-1 md:pb-2 font-medium text-sm cursor-pointer md:text-lg border-b-2
+          relative top-0.5 pb-2 font-medium text-sm cursor-pointer md:text-lg border-b-2
         ${skillActive === item.skillName ? "text-foreground border-foreground" : "text-muted-foreground border-transparent"}
       `}
             onClick={() => setSkillActive(item.skillName)}

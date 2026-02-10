@@ -24,7 +24,7 @@ export function ProjectsNav({
           onClick={() => setIsActive(item.optionName)}
           key={item.optionName}
           className={`
-              py-1 px-2 md:py-2 md:px-4 flex items-center justify-center rounded-full text-xs md:text-base cursor-pointer font-medium
+              px-2 py-2 md:px-4 flex items-center justify-center rounded-full text-xs md:text-base cursor-pointer font-medium
               ${isActive === item.optionName ? "hover:bg-background bg-background shadow" : "hover:bg-muted-foreground/20"}
               `}
           type="button"
