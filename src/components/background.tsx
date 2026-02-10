@@ -1,24 +1,43 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-const particlesAmount = 40;
+const desktopParticles = 40;
+const mobileParticles = 16;
 
 export function Background() {
-  const particles = useMemo(
-    () =>
-      Array.from({ length: particlesAmount }).map(() => ({
-        id: crypto.randomUUID(),
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        size: 3 + Math.random() * 6,
-        duration: 12 + Math.random() * 6,
-        delay: Math.random() * 6,
-        opacity: 0.2 + Math.random() * 0.4,
-      })),
-    [],
-  );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
+
+    const update = () => setIsMobile(media.matches);
+    update();
+
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  const particles = useMemo(() => {
+    const amount = isMobile ? mobileParticles : desktopParticles;
+
+    return Array.from({ length: amount }).map(() => ({
+      id: crypto.randomUUID(),
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      size: 3 + Math.random() * 6,
+      duration: 12 + Math.random() * 6,
+      delay: Math.random() * 6,
+      opacity: 0.2 + Math.random() * 0.4,
+    }));
+  }, [isMobile]);
 
   return (
-    <div className="fixed inset-0 -z-10 pointer-events-none bg-background">
+    <div
+      className="fixed top-0 left-0 w-screen h-svh -z-10 pointer-events-none bg-background"
+      style={{
+        transform: "translateZ(0)",
+        willChange: "transform",
+      }}
+    >
       {particles.map((p) => (
         <span
           key={p.id}
