@@ -7,7 +7,7 @@ export function SectionContainer({
   return (
     <section
       className={`
-        max-w-5xl w-full py-8 md:py-24 px-4 md:px-10 mx-auto
+        max-w-5xl w-full pt-24 pb-12 px-4 md:px-10 mx-auto
         ${className}
       `}
     >
