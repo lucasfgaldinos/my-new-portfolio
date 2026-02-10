@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import { Element } from "react-scroll";
 import { Pagination } from "swiper/modules";
@@ -48,12 +49,20 @@ export function Projects() {
             }}
             className="mySwiper pb-4! select-none"
           >
-            {filteredProjects.length > 0 &&
-              filteredProjects.map((item) => (
-                <SwiperSlide className="h-auto! flex!" key={item.name}>
+            {filteredProjects.map((item) => (
+              <SwiperSlide
+                className="h-auto! flex!"
+                key={`${isActive}-${item.name}`}
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                >
                   <ProjectCard project={item} />
-                </SwiperSlide>
-              ))}
+                </motion.div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </SectionContainer>

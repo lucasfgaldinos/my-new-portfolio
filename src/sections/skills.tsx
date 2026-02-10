@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import { Element } from "react-scroll";
 import { SectionContainer } from "@/components/sectionContainer";
@@ -24,7 +25,14 @@ export function Skills() {
           <div className="flex gap-4 mt-8 flex-wrap">
             {filteredSkills.length > 0 &&
               filteredSkills.map((item) => (
-                <SkillCard key={item.name} skill={item} />
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                >
+                  <SkillCard skill={item} />
+                </motion.div>
               ))}
           </div>
         </div>
